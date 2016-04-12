@@ -1,0 +1,9 @@
+There are 2 data structures that my server uses which used synchronization:
+	buffer.h
+	emails.h
+
+buffer.h is the queue which stores clients the server recieves.
+Threads take clients from this queue. This class is thread safe.
+
+emails.h contains the map of all users and their emails.
+It is a thread safe class to prevent multiple threads from editing the map simultaneously.
